@@ -2,6 +2,8 @@
 
 <img width="1178" alt="Screenshot 2025-03-03 at 12 09 22 PM" src="https://github.com/user-attachments/assets/e41b43fd-291b-43f4-ace1-9d5f6a514df8" />
 
+**Deployed app** - https://vmr093.github.io/BeaconHome2/#home
+
 
 ## Overview
 Beacon Home Inspections & Services provides professional home inspection services, ensuring clients receive thorough evaluations of their properties. This website serves as an informational and scheduling platform for potential customers.
