@@ -1,16 +1,16 @@
 /* Toggle Style Switcher */
 
-const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');
-styleSwitcherToggle.addEventListener('click', () => { document.querySelector('.style-switcher').classList.toggle('open'); })
+// const styleSwitcherToggle = document.querySelector('.style-switcher-toggler');
+// styleSwitcherToggle.addEventListener('click', () => { document.querySelector('.style-switcher').classList.toggle('open'); })
 
-window.addEventListener('scroll', () => { if(document.querySelector('.style-switcher').classList.contains('open')) { document.querySelector('.style-switcher').classList.remove('open'); } })
+// window.addEventListener('scroll', () => { if(document.querySelector('.style-switcher').classList.contains('open')) { document.querySelector('.style-switcher').classList.remove('open'); } })
 
-const alternateStyles = document.querySelectorAll('.alternate-style');
-function setActiveStyle(color) {
-    alternateStyles.forEach((style) => {
-        if(color === style.getAttribute('title')) { style.removeAttribute('disabled'); } else { style.setAttribute('disabled', 'true'); }
-    })
-}
+// const alternateStyles = document.querySelectorAll('.alternate-style');
+// function setActiveStyle(color) {
+//     alternateStyles.forEach((style) => {
+//         if(color === style.getAttribute('title')) { style.removeAttribute('disabled'); } else { style.setAttribute('disabled', 'true'); }
+//     })
+// }
 
 /* Dark/Light Mode */
 
@@ -21,9 +21,16 @@ dayNight.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 })
 
+
 window.addEventListener('load', () => {
-    if(document.body.classList.contains('dark')) { dayNight.querySelector('i').classList.add('fa-sun'); } else { dayNight.querySelector('i').classList.add('fa-moon'); }
-})
+    // Ensure the site loads in light mode by removing the "dark" class
+    document.body.classList.remove('dark');
+
+    // Set the icon to moon (so the user can switch to dark mode)
+    dayNight.querySelector('i').classList.remove('fa-sun');
+    dayNight.querySelector('i').classList.add('fa-moon');
+});
+
 
 /* Typing Animation */
 
@@ -73,14 +80,14 @@ function updateNav(element){
     }
 }
 
-document.querySelector('.hire-me').addEventListener('click', function(){
-    const sectionIndex = this.getAttribute('data-section-index');
-    /*console.log(sectionIndex);*/
-    showSection(this);
-    updateNav(this);
-    removeBackSection();
-    addBackSection(sectionIndex);
-})
+// document.querySelector('.hire-me').addEventListener('click', function(){
+//     const sectionIndex = this.getAttribute('data-section-index');
+//     /*console.log(sectionIndex);*/
+//     showSection(this);
+//     updateNav(this);
+//     removeBackSection();
+//     addBackSection(sectionIndex);
+// })
 
 /* Activating Mobile Menu */
 
