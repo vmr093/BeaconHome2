@@ -317,7 +317,7 @@ body { line-height: 1.5; font-size: 16px; font-family: 'Poppins', sans-serif; }
     transform: translateX(100%);
 }
     .style-switcher.open { transform: translateX(-25px); }
-    .style-switcher .s-icon {
+    /* .style-switcher .s-icon {
         position: absolute;
         height: 40px;
         width: 40px;
@@ -330,7 +330,7 @@ body { line-height: 1.5; font-size: 16px; font-family: 'Poppins', sans-serif; }
         margin-right: 25px;
         cursor: pointer;
         transition: all .3s ease;
-        border-radius: 50%;
+        border-radius: 50%; */
     }
         /* .style-switcher .s-icon i { line-height: 40px; } */
     /* .style-switcher .style-switcher-toggler { top: 0; } */
@@ -424,6 +424,10 @@ body { line-height: 1.5; font-size: 16px; font-family: 'Poppins', sans-serif; }
 
 .style-switcher-toggler {
     display: none !important;
+}
+
+.day-night s-icon {
+    display: none;
 }
 
 .contact-info-container {
